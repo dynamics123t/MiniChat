@@ -1,0 +1,21 @@
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\bin\Debug\CHAT.exe.config
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\bin\Debug\CHAT.exe
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\bin\Debug\CHAT.pdb
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\SERVER.csprojResolveAssemblyReference.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\CHAT.Form1.resources
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\CHAT.Properties.Resources.resources
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\SERVER.csproj.GenerateResource.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\SERVER.csproj.CoreCompileInputs.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\CHAT.exe
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\CHAT.pdb
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\bin\Debug\CHAT.exe.config
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\bin\Debug\CHAT.exe
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\bin\Debug\CHAT.pdb
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\SERVER.csproj.AssemblyReference.cache
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\SERVER.csproj.SuggestedBindingRedirects.cache
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\CHAT.Form1.resources
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\CHAT.Properties.Resources.resources
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\SERVER.csproj.GenerateResource.cache
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\SERVER.csproj.CoreCompileInputs.cache
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\CHAT.exe
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\CHAT.pdb

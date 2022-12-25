@@ -1,0 +1,21 @@
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\bin\Debug\CLIENT.exe.config
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\bin\Debug\CLIENT.exe
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\bin\Debug\CLIENT.pdb
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.csprojResolveAssemblyReference.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.frmCLIENT.resources
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.Properties.Resources.resources
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.csproj.GenerateResource.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.exe
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.pdb
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CLIENT\obj\Debug\CLIENT.csproj.AssemblyReference.cache
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CLIENT\obj\Debug\CLIENT.csproj.SuggestedBindingRedirects.cache
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CLIENT\obj\Debug\CLIENT.frmCLIENT.resources
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CLIENT\obj\Debug\CLIENT.Properties.Resources.resources
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CLIENT\obj\Debug\CLIENT.csproj.GenerateResource.cache
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CLIENT\obj\Debug\CLIENT.exe
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CLIENT\obj\Debug\CLIENT.pdb
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CLIENT\bin\Debug\CLIENT.exe.config
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CLIENT\bin\Debug\CLIENT.exe
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CLIENT\bin\Debug\CLIENT.pdb
