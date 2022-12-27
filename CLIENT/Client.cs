@@ -113,6 +113,7 @@ namespace CLIENT
             {
                 MessageBox.Show("Vui lòng nhập tin nhắn !");
             }
+            //path = "";
         }
 
         //nhận dữ liệu
@@ -274,6 +275,16 @@ namespace CLIENT
         private void listView1_MouseLeave(object sender, EventArgs e)
         {
             listView1.Visible = false;
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có muốn xóa tin nhắn này không", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dr == DialogResult.OK)
+            {
+                if (lsvMessage.SelectionLength > 0)
+                    lsvMessage.Cut();
+            }
         }
     }
 }

@@ -63,9 +63,29 @@ namespace CHAT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_file_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-file-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_image_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-image-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_send_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-send-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

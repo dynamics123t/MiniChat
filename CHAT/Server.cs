@@ -13,6 +13,7 @@ using System.Threading;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Drawing.Imaging;
+using System.Reflection;
 
 namespace CHAT
 {
@@ -129,6 +130,7 @@ namespace CHAT
                             lsvMessage.AppendText("Client " + client.LocalEndPoint + " " + "(" + DateTime.Now.ToString("h:mm:ss tt") + "): \n" + str);
                         lsvMessage.AppendText("\n");
                     }
+                   // Client gửi nhiều client nhưng mà nó không gửi đc chính nó
                 foreach (Socket item in clientList)
                 {
                     if (item != null && item != client)
@@ -288,6 +290,12 @@ namespace CHAT
         private void listView1_MouseLeave(object sender, EventArgs e)
         {
             listView1.Visible = false;
+        }
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            //lsvMessage.Undo();
+            if (lsvMessage.SelectionLength > 0)
+                lsvMessage.Cut();
         }
     }
 }
