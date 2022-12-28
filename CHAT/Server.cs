@@ -14,6 +14,8 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Drawing.Imaging;
 using System.Reflection;
+using CLIENT;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CHAT
 {
@@ -117,6 +119,7 @@ namespace CHAT
                     {
                         Image image = byteArrayToImage(data);
                         Clipboard.SetImage(image);
+                        lsvMessage.SelectionAlignment = HorizontalAlignment.Left;
                         lsvMessage.AppendText("Client " + client.LocalEndPoint + " " + "(" + DateTime.Now.ToString("h:mm:ss tt") + "):  \n");
                         lsvMessage.Paste();
                         lsvMessage.AppendText("\n");
@@ -127,7 +130,8 @@ namespace CHAT
                 string str = ob as string;*/
                         string str = Deseriliaze(data);
                         if (str != null || str != String.Empty)
-                            lsvMessage.AppendText("Client " + client.LocalEndPoint + " " + "(" + DateTime.Now.ToString("h:mm:ss tt") + "): \n" + str);
+                            lsvMessage.SelectionAlignment = HorizontalAlignment.Left;
+                        lsvMessage.AppendText("Client " + client.LocalEndPoint + " " + "(" + DateTime.Now.ToString("h:mm:ss tt") + "): \n" + str);
                         lsvMessage.AppendText("\n");
                     }
                    // Client gửi nhiều client nhưng mà nó không gửi đc chính nó
@@ -164,15 +168,17 @@ namespace CHAT
         {
             return Encoding.Unicode.GetString(data);
         }
-        private void btnSend_Click(object sender, EventArgs e)
+        private void SendMessage()
         {
             if (txbMessage.Text != String.Empty && path == "" && icon == null)
             {
+                lsvMessage.SelectionAlignment = HorizontalAlignment.Right;
                 lsvMessage.AppendText("Tôi " + " " + "(" + DateTime.Now.ToString("h:mm:ss tt") + "): \n" + txbMessage.Text + "\n");
             }
             else if (icon != null)
             {
                 Clipboard.SetImage(icon);
+                lsvMessage.SelectionAlignment = HorizontalAlignment.Right;
                 lsvMessage.AppendText("Tôi " + " " + "(" + DateTime.Now.ToString("h:mm:ss tt") + ") \n");
                 lsvMessage.Paste();
                 lsvMessage.AppendText("\n");
@@ -181,6 +187,7 @@ namespace CHAT
             {
                 Image image1 = Image.FromFile(path);
                 Clipboard.SetImage(image1);
+                lsvMessage.SelectionAlignment = HorizontalAlignment.Right;
                 lsvMessage.AppendText("Tôi " + " " + "(" + DateTime.Now.ToString("h:mm:ss tt") + "): \n");
                 lsvMessage.Paste();
                 lsvMessage.AppendText("\n");
@@ -199,6 +206,46 @@ namespace CHAT
             }*/
             //AddMessage(txbMessage.Text);
             txbMessage.Clear();
+        }
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            SendMessage();
+           /* if (txbMessage.Text != String.Empty && path == "" && icon == null)
+            {
+                lsvMessage.SelectionAlignment = HorizontalAlignment.Right;
+                lsvMessage.AppendText("Tôi " + " " + "(" + DateTime.Now.ToString("h:mm:ss tt") + "): \n" + txbMessage.Text + "\n");
+            }
+            else if (icon != null)
+            {
+                Clipboard.SetImage(icon);
+                lsvMessage.SelectionAlignment = HorizontalAlignment.Right;
+                lsvMessage.AppendText("Tôi " + " " + "(" + DateTime.Now.ToString("h:mm:ss tt") + ") \n");
+                lsvMessage.Paste();
+                lsvMessage.AppendText("\n");
+            }
+            else if (path != "")
+            {
+                Image image1 = Image.FromFile(path);
+                Clipboard.SetImage(image1);
+                lsvMessage.SelectionAlignment = HorizontalAlignment.Right;
+                lsvMessage.AppendText("Tôi " + " " + "(" + DateTime.Now.ToString("h:mm:ss tt") + "): \n");
+                lsvMessage.Paste();
+                lsvMessage.AppendText("\n");
+            }
+            foreach (Socket item in clientList)
+            {
+                Send(item);
+            }
+            path = "";
+            txbMessage.Text = "";
+            icon = null;
+            *//*for (int i = 0; i < clientList.Count; i++)
+            {
+                Socket item = clientList[i];
+                Send(item);
+            }*//*
+            //AddMessage(txbMessage.Text);
+            txbMessage.Clear();*/
         }
         string path = "";
         private void btnImage_Click(object sender, EventArgs e)
@@ -291,11 +338,74 @@ namespace CHAT
         {
             listView1.Visible = false;
         }
-        private void btnRemove_Click(object sender, EventArgs e)
+
+        private void addClient_Click(object sender, EventArgs e)
+        {
+            frmCLIENT f = new frmCLIENT();
+            f.Show();
+        }
+        private void btnFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string fileName;
+
+                fileName = dlg.FileName;
+                MessageBox.Show(fileName);
+                string a = File.ReadAllText(fileName);
+                Console.WriteLine(a);
+            }
+        }
+
+        private void removeMessageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //lsvMessage.Undo();
-            if (lsvMessage.SelectionLength > 0)
-                lsvMessage.Cut();
+            DialogResult dr = MessageBox.Show("Bạn có muốn xóa tin nhắn này không", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dr == DialogResult.OK)
+            {
+                if (lsvMessage.SelectionLength > 0)
+                    lsvMessage.Cut();
+            }
+        }
+
+        private void tranToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /* DialogResult dr = MessageBox.Show("Bạn có muốn chuyển tiếp tin nhắn này không", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+             if (dr == DialogResult.OK)
+             {
+                 if (lsvMessage.SelectionLength > 0)
+                     lsvMessage.Copy();
+             }*/
+            DialogResult dialog = MessageBox.Show("Bạn có muốn chuyển tiếp tin nhắn này không !!!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (dialog == DialogResult.OK)
+            {
+                RichTextBox tam = new RichTextBox();
+                int firstcharindex = lsvMessage.GetFirstCharIndexOfCurrentLine();
+                int currentline = lsvMessage.GetLineFromCharIndex(firstcharindex);
+                string currentlinetext = lsvMessage.Lines[currentline];
+                lsvMessage.Select(firstcharindex, currentlinetext.Length);
+                tam.Text = "Bạn đã chuyển tiếp tin nhắn ";
+                tam.ForeColor = Color.Red;
+                tam.SelectionAlignment = lsvMessage.SelectionAlignment;
+                lsvMessage.SelectedRtf = tam.Rtf;
+                txbMessage.Text = currentlinetext;
+
+                SendMessage();
+                txbMessage.Text = "";
+
+
+            }
+            if (dialog == DialogResult.Cancel)
+            {
+                return;
+            }
+        }
+
+        private void receiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text))
+                lsvMessage.Paste();
         }
     }
 }

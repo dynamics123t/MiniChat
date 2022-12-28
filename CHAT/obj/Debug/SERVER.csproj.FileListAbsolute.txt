@@ -19,3 +19,7 @@ D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\SERVER.csproj.Gene
 D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\SERVER.csproj.CoreCompileInputs.cache
 D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\CHAT.exe
 D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\CHAT.pdb
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\bin\Debug\CLIENT.exe
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\bin\Debug\CLIENT.pdb
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\bin\Debug\CLIENT.exe.config
+D:\Hoc Tap\HK7\Lập trình trong windows\CHAT\CHAT\obj\Debug\SERVER.csproj.CopyComplete

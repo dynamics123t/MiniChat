@@ -92,5 +92,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-file-48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CLIENT\CLIENT.csproj">
+      <Project>{394BBF17-5E34-4A14-B8DD-359C8C3F4960}</Project>
+      <Name>CLIENT</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

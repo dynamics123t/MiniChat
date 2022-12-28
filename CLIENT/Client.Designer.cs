@@ -28,24 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lsvMessage = new System.Windows.Forms.RichTextBox();
-            this.imageList1 = new System.Windows.Forms.ImageList();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removeMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transferMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.receiveMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.listView1 = new System.Windows.Forms.ListView();
             this.txbMessage = new System.Windows.Forms.RichTextBox();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
             this.btnFile = new System.Windows.Forms.Button();
             this.btnIcon = new System.Windows.Forms.Button();
             this.btnImage = new System.Windows.Forms.Button();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lsvMessage
             // 
-            this.lsvMessage.Location = new System.Drawing.Point(398, 1);
+            this.lsvMessage.ContextMenuStrip = this.contextMenuStrip1;
+            this.lsvMessage.Location = new System.Drawing.Point(338, 12);
             this.lsvMessage.Name = "lsvMessage";
-            this.lsvMessage.Size = new System.Drawing.Size(733, 456);
+            this.lsvMessage.Size = new System.Drawing.Size(793, 445);
             this.lsvMessage.TabIndex = 4;
             this.lsvMessage.Text = "";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeMessageToolStripMenuItem,
+            this.transferMessageToolStripMenuItem,
+            this.receiveMessageToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(195, 76);
+            // 
+            // removeMessageToolStripMenuItem
+            // 
+            this.removeMessageToolStripMenuItem.Name = "removeMessageToolStripMenuItem";
+            this.removeMessageToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
+            this.removeMessageToolStripMenuItem.Text = "Remove message";
+            this.removeMessageToolStripMenuItem.Click += new System.EventHandler(this.removeMessageToolStripMenuItem_Click);
+            // 
+            // transferMessageToolStripMenuItem
+            // 
+            this.transferMessageToolStripMenuItem.Name = "transferMessageToolStripMenuItem";
+            this.transferMessageToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
+            this.transferMessageToolStripMenuItem.Text = "Transfer message";
+            this.transferMessageToolStripMenuItem.Click += new System.EventHandler(this.transferMessageToolStripMenuItem_Click);
+            // 
+            // receiveMessageToolStripMenuItem
+            // 
+            this.receiveMessageToolStripMenuItem.Name = "receiveMessageToolStripMenuItem";
+            this.receiveMessageToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
+            this.receiveMessageToolStripMenuItem.Text = "Receive message";
+            this.receiveMessageToolStripMenuItem.Click += new System.EventHandler(this.receiveMessageToolStripMenuItem_Click);
             // 
             // imageList1
             // 
@@ -58,29 +95,20 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(14, 215);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(298, 242);
+            this.listView1.Size = new System.Drawing.Size(318, 242);
             this.listView1.TabIndex = 11;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.Visible = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             this.listView1.MouseLeave += new System.EventHandler(this.listView1_MouseLeave);
             // 
             // txbMessage
             // 
-            this.txbMessage.Location = new System.Drawing.Point(398, 463);
+            this.txbMessage.Location = new System.Drawing.Point(338, 463);
             this.txbMessage.Name = "txbMessage";
-            this.txbMessage.Size = new System.Drawing.Size(650, 55);
+            this.txbMessage.Size = new System.Drawing.Size(710, 55);
             this.txbMessage.TabIndex = 12;
             this.txbMessage.Text = "";
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Location = new System.Drawing.Point(176, 465);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 53);
-            this.btnRemove.TabIndex = 13;
-            this.btnRemove.Text = "Gỡ tin";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnSend
             // 
@@ -96,11 +124,12 @@
             // btnFile
             // 
             this.btnFile.Image = global::CLIENT.Properties.Resources.icons8_file_48;
-            this.btnFile.Location = new System.Drawing.Point(257, 466);
+            this.btnFile.Location = new System.Drawing.Point(176, 464);
             this.btnFile.Name = "btnFile";
             this.btnFile.Size = new System.Drawing.Size(75, 52);
             this.btnFile.TabIndex = 14;
             this.btnFile.UseVisualStyleBackColor = true;
+            this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
             // 
             // btnIcon
             // 
@@ -130,7 +159,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1167, 549);
             this.Controls.Add(this.btnFile);
-            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.txbMessage);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnIcon);
@@ -141,6 +169,7 @@
             this.Name = "frmCLIENT";
             this.Text = "CLIENT";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmCLIENT_FormClosed);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -154,8 +183,11 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.RichTextBox txbMessage;
-        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnFile;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem removeMessageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transferMessageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem receiveMessageToolStripMenuItem;
     }
 }
 
